@@ -1,0 +1,14 @@
+.applicant-list-heading {
+    text-align: center;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    text-align: center;
+    padding-left: 0px;
+}
+
+.category-item {
+    list-style: none
+}

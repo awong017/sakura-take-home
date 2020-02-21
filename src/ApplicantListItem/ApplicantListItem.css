@@ -1,0 +1,10 @@
+.applicant-detail-list {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    padding-left: 0px;
+}
+
+.applicant-detail {
+    list-style: none;
+    text-align: center;
+}
