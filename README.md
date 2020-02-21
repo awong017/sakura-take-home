@@ -14,3 +14,10 @@ between ascending and descending order.
 React context was used to allow all components to access state
 without the use of prop-drilling
 
+Incorporated dynamic classes to change colors of credit indicator based
+on the value of the indicator
+
+    Good Score: Green
+    Neutral Score: Yellow
+    Bad Score: Red
+

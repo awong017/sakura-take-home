@@ -5,6 +5,19 @@ import './ApplicantListItem.css';
 // Class component used to render the each individual applicant
 
 class ApplicantListItem extends Component {
+
+  checkCredit = (credit) => {
+    if(credit>7) {
+      return "good-score"
+    }
+    else if(credit>5 && credit<7) {
+      return "neutral-score"
+    }
+    else {
+      return "bad-score"
+    }
+  }
+
   render() {
     const { created, firstName, lastName, credit } = this.props
 
@@ -14,7 +27,7 @@ class ApplicantListItem extends Component {
               <li className="applicant-detail">{format(created, 'M/d/yy')}</li>
               <li className="applicant-detail">{firstName}</li>
               <li className="applicant-detail">{lastName}</li>
-              <li className="applicant-detail">{credit}</li>
+              <li className={this.checkCredit(credit)}>{credit}</li>
           </ul>
       </div>
     );

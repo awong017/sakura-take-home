@@ -16,3 +16,21 @@
     list-style: none;
     text-align: center;
 }
+
+.bad-score {
+    list-style: none;
+    text-align: center;
+    color: red;
+}
+
+.neutral-score {
+    list-style: none;
+    text-align: center;
+    color: yellow;
+}
+
+.good-score {
+    list-style: none;
+    text-align: center;
+    color: green;
+}
