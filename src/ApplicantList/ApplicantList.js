@@ -28,7 +28,7 @@ class ApplicantList extends Component {
                         <button className="sort" onClick={() => applicants.sort(sortLastName)}>{'\u25bc'}</button>
                     </li>
                     <li className="category-item">
-                        <label className="category-label">Credit Indicator</label>
+                        <label className="category-label">Credit</label>
                         <button className="sort" onClick={() => applicants.sort(sortCredit)}>{'\u25bc'}</button>
                     </li>
                 </ul>

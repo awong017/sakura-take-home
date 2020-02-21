@@ -18,18 +18,21 @@
 }
 
 .bad-score {
+    font-weight: bold;
     list-style: none;
     text-align: center;
     color: red;
 }
 
 .neutral-score {
+    font-weight: bold;
     list-style: none;
     text-align: center;
     color: yellow;
 }
 
 .good-score {
+    font-weight: bold;
     list-style: none;
     text-align: center;
     color: green;
