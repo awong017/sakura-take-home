@@ -1,7 +1,15 @@
+.applicant-list-item:nth-child(even) {
+    background-color: darkgrey;
+}
+
 .applicant-detail-list {
     display: grid;
     grid-template-columns: repeat(4, 25%);
     padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .applicant-detail {

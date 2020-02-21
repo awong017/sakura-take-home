@@ -7,7 +7,7 @@ class ApplicantListItem extends Component {
     const { created, firstName, lastName, credit } = this.props
 
     return (
-      <div className='ApplicantListItem'>
+      <div className='applicant-list-item'>
           <ul className="applicant-detail-list">
               <li className="applicant-detail">{format(created, 'M/d/yy')}</li>
               <li className="applicant-detail">{firstName}</li>

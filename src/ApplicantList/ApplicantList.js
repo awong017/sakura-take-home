@@ -8,27 +8,40 @@ class ApplicantList extends Component {
     static contextType = Context;
 
     render() {
-        const { applicants } = this.context;
+        const { applicants, sortDate, sortFirstName, sortLastName, sortCredit } = this.context;
 
         return (
-            <div className='ApplicantList'>
+            <div className='applicant-list'>
                 <h1 className="applicant-list-heading">Applicant List</h1>
-                <button onClick={()=>console.log(applicants)}>Applicants</button>
                 <ul className="categories">
-                    <li className="category-item"><h3>Date Created</h3></li>
-                    <li className="category-item"><h3>First Name</h3></li>
-                    <li className="category-item"><h3>Last Name</h3></li>
-                    <li className="category-item"><h3>Credit Indicator</h3></li>
+                    <li className="category-item">
+                        <label className="category-label">Created</label>
+                        <button className="sort" onClick={() => applicants.sort(sortDate)}>{'\u25bc'}</button>
+                    </li>
+                    <li className="category-item">
+                        <label className="category-label">First Name</label>
+                        <button className="sort" onClick={() => applicants.sort(sortFirstName)}>{'\u25bc'}</button>
+                    </li>
+                    <li className="category-item">
+                        <label className="category-label">Last Name</label>
+                        <button className="sort" onClick={() => applicants.sort(sortLastName)}>{'\u25bc'}</button>
+                    </li>
+                    <li className="category-item">
+                        <label className="category-label">Credit Indicator</label>
+                        <button className="sort" onClick={() => applicants.sort(sortCredit)}>{'\u25bc'}</button>
+                    </li>
                 </ul>
-                {applicants.map(applicant => 
-                    <ApplicantListItem
-                        key={applicant.id}
-                        created={applicant.created}
-                        firstName={applicant.firstName}
-                        lastName={applicant.lastName}
-                        credit={applicant.credit}
-                    />
-                )}
+                <section className="applicant-section">
+                    {applicants.map(applicant => 
+                        <ApplicantListItem
+                            key={applicant.id}
+                            created={applicant.created}
+                            firstName={applicant.firstName}
+                            lastName={applicant.lastName}
+                            credit={applicant.credit}
+                        />
+                    )}
+                </section>
             </div>
         );
     }
