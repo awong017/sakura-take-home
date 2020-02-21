@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { format } from 'date-fns';
 import './ApplicantListItem.css';
 
+// Class component used to render the each individual applicant
+
 class ApplicantListItem extends Component {
   render() {
     const { created, firstName, lastName, credit } = this.props

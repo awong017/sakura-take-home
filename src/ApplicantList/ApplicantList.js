@@ -3,6 +3,7 @@ import ApplicantListItem from '../ApplicantListItem/ApplicantListItem';
 import Context from '../context';
 import './ApplicantList.css';
 
+// Class component used to render the overall Applicant List
 class ApplicantList extends Component {
 
     static contextType = Context;

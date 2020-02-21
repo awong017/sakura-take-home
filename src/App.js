@@ -5,6 +5,10 @@ import './App.css';
 
 class App extends Component {
 
+  // Created state that contains the list of applicants as well as
+  // category orders. The category orders are used to toggle the data
+  // between ascending and descending order
+
   state = {
     applicants: [],
     dateOrder: false,
@@ -14,6 +18,8 @@ class App extends Component {
   }
 
   static contextType = Context;
+
+  // The following are methods used for sorting data
 
   sortDate = (a,b) => {
     const { dateOrder } = this.state
@@ -51,9 +57,14 @@ class App extends Component {
     return order
   }
 
+  // Method for converting the date to unix time. This was used in order
+  // to sort the date
+
   unixTime = (date) => {
     return new Date(date).getTime()
   }
+
+  // Life cycle used to fetch the list of applicants
 
   componentDidMount() {
     const url = "http://private-041255-sakura3.apiary-mock.com/applicants";
@@ -79,6 +90,9 @@ class App extends Component {
         })
       })
     }
+
+  // React context was used to allow all components to access state
+  // without the use of prop-drilling
 
   render() {
     const value = {
